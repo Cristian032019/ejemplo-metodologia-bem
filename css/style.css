@@ -1,0 +1,121 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* 
+colores #333333
+*/
+:root {
+    --color-header-menu: #333333;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*  inicio cabecera  */
+.header__nav {
+    background-color: var(--color-header-menu);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.header__ul {
+    display: flex;
+    list-style: none;
+    /* background: red; */
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.header__logo {
+    width: 140px;
+    height: 50px;
+    padding-left: 20px;
+
+}
+
+.header__nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.header__nav-link:hover {
+    text-decoration: underline;
+}
+
+.header__nav-link:active {
+    padding: .7rem;
+   
+}
+
+/* .header__nav-link--active{
+    padding: 1rem;
+    background-color: aqua;
+} */
+/* fin cabecera  */
+
+
+
+/*  inicio banner página  */
+.banner{
+    padding-top: 6rem;
+    background-color: red;
+    
+}
+/*  finbanner página  */
+
+@media(max-width:1024px) {
+    body{
+        background-color: yellow;
+    }
+}
+
+@media(max-width:768px) {
+    body{
+        background-color: blue;
+    }
+    
+    .header__hamburger {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 10px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+
+    }
+    
+    .header__hamburger .header__hamburger-icon {
+        width: 30px;
+        height: 30px;
+        background: url("../asset/img/bars-solid.svg")no-repeat;
+        background-size: contain;
+        background-position: center;
+        filter: drop-shadow(1px 2px 1px (0, 0, 0, .1));
+    
+    }
+    
+    .header__hamburger.active .header__hamburger-icon {
+        background: url("../asset/img/xmark-solid.svg")no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    
+}
+
+
+@media(max-width:320px) {
+    body{
+        background-color: red;
+    }
+}
